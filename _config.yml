@@ -1,0 +1,32 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               citrusui
+tagline:             Just a programmer.
+url:                 https://citrusui.github.io
+paginate:            1
+baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Avery Magnotti
+  url:               https://twitter.com/citrusui
+  email:             averymagnotti@outlook.com
+
+# Custom vars
+version:             1.0
+github:
+  repo:              https://github.com/citrusui/citrusui.github.io
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist

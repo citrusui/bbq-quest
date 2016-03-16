@@ -17,9 +17,9 @@ Here are a couple of URLs that Pangu uses in their iOS 8.0 — 8.1 jailbreak
 
 - [http://tj.8.pangu.io/mac/8/](http://tj.8.pangu.io/mac/8/) (used to check for a working Internet connection)
 
-- [https://albert.apple.com/WebObjects/ALUnbrick.woa/wa/deviceActivation](https://albert.apple.com/WebObjects/ALUnbrick.woa/wa/deviceActivation) (checks if a device is activated or not. activation is required for Pangu8 to continue)
+- [https://albert.apple.com/...](https://albert.apple.com/WebObjects/ALUnbrick.woa/wa/deviceActivation) (checks if a device is activated or not. activation is required for Pangu8 to continue)
 
-- [http://xcode.pangu.io/download_key.plist](http://xcode.pangu.io/download_key.plist) (downloads Xcode and mounts DeveloperDiskImage)
+- [http://xcode.pangu.io/...](http://xcode.pangu.io/download_key.plist) (downloads Xcode and mounts DeveloperDiskImage)
 
 And if you're curious, here's a gist of the latter URL, which changed a couple of times:
 

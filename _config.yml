@@ -5,7 +5,7 @@ permalink:           pretty
 title:               citrusui
 tagline:             Just a programmer.
 url:                 https://citrusui.github.io
-paginate:            3
+paginate:            2
 paginate_path:            "/page/:num/"
 baseurl:             ""
 

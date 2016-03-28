@@ -32,6 +32,6 @@ Here are some tools I’ve ran into issues with, which plague 32-bit and 64-bit 
 
 GNU and BSD utilities are slightly, but very different. As I said above, saurik uses GNU utilities. He even relies on using their special GNU arguments in various parts of Cydia. Therefore, switching over to BSD is not ideal, at least at this time. Tools like tar, cp, and chown act very differently between BSD and GNU. I talked to saurik about this; he has no plans to work around this. After pondering back and forth, I’ve attempted to stay neutral, and stay with GNU utilities, mainly because they “just work”. Yes, they are old and hacky, but they work. Perhaps Pangu will bundle the iosbinpack in the next jailbreak — who knows?
 
-You can use the iosbinpack all you want — I’m not forcing you to stick with GNU. However, if you want to revert back to GNU, it’s not always easy. While some GNU utilities are on Telesphoreo, like diskdev-cmds and file-cmds, others are not — they’re bundled with stock iOS . Just keep that in mind.
+You can use the iosbinpack all you want — I’m not forcing you to stick with GNU. However, if you want to revert back to GNU, it’s not always easy. While some GNU utilities are on Telesphoreo, like diskdev-cmds and file-cmds, others are not — they’re bundled with stock iOS. Just keep that in mind.
 
 Thanks to [@ReddestDream](https://twitter.com/ReddestDream) for contributing to this article. I really appreciate it!

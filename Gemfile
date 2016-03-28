@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'colorator'
 gem 'github-pages'
+gem 'guard'
+gem 'guard-rspec'
 gem 'jekyll'
 gem 'jekyll-paginate'
 gem 'jekyll-gist'

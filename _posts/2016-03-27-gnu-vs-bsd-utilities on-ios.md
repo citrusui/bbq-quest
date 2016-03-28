@@ -1,15 +1,15 @@
 ---
 layout: post
 title: GNU vs BSD utilities on iOS
-description: A closer look at what the iosbinpack means for jailbreaking.
+description: A closer look at what the iosbinpack means for the future of jailbreaking.
 ---
 
-Surprise surprise, the Apple TV can now be jailbroken again! Hooray! But that’s not why I’m writing. No, something more (or less) interesting is with this jailbreak. It doesn’t come with saurik’s core utilities from Telesphoreo, it includes binaries from https://opensource.apple.com, compiled by none other than Jonathan Levin (AKA Morpheus). I call these iOS binaries the “iosbinpack” (based on its filename, of course).
+Surprise surprise, the Apple TV can now be jailbroken again! Hooray! But that’s not why I’m writing. No, something more (or less) interesting is with this jailbreak. It doesn’t come with saurik’s core utilities from Telesphoreo, it includes binaries from [https://opensource.apple.com](https://opensource.apple.com), compiled by none other than Jonathan Levin (AKA [@Morpheus______](http://twitter.com/Morpheus______). I call these iOS binaries the “iosbinpack” (based on its filename, of course).
 
 Why is this important? Well, there are a couple of things:
 
 - all binaries must be compiled for arm64 on the new Apple TV. saurik’s utilities haven’t been compiled for 64-bit yet.
-- these binaries also happen to work on watchOS, which was proven jailbreakable by Luca Todesco (@qwertyoruiop)
+- these binaries also happen to work on watchOS, which was proven jailbreakable by Luca Todesco ([@qwertyoruiop](https://twitter.com/qwertyoruiop))
 - the tools included are from BSD, not GNU, like saurik’s
 
 In a nutshell, these are the tools every developer needs. It comes with a bunch of stuff, like dropbear (minimal SSH clone), jtool, procexp (Process Explorer), and the whole slew of BSD Utilities (cp, chown, gzip, etc.)
@@ -23,7 +23,7 @@ The binaries, for the most part, are very good. They’re much more recent than 
 Here are some tools I’ve ran into issues with, which plague 32-bit and 64-bit devices:
 
 - login: it just doesn’t work. I don’t know why, but it wouldn’t let me enter the Terminal at any time. saurik’s version worked fine. 64-bit version works fine.
-- zsh: It seems like one of the libraries/files it requires is malformed, specifically /usr/local/lib/zsh/5.0.8/zsh/zle.so.
+- zsh: It seems like one of the libraries/files it requires is malformed, specifically `/usr/local/lib/zsh/5.0.8/zsh/zle.so`.
 - sysctl: very broken, also vnode errors.
 - kextstat: does not work at all.
 - ioreg: missing a few things and isn’t up to date.
@@ -34,4 +34,4 @@ GNU and BSD utilities are slightly, but very different. As I said above, saurik 
 
 You can use the iosbinpack all you want — I’m not forcing you to stick with GNU. However, if you want to revert back to GNU, it’s not always easy. While some GNU utilities are on Telesphoreo, like diskdev-cmds and file-cmds, others are not — they’re bundled with stock iOS . Just keep that in mind.
 
-Thanks to @ReddestDream for contributing to this article. I really appreciate it!
+Thanks to [@ReddestDream](https://twitter.com/ReddestDream) for contributing to this article. I really appreciate it!

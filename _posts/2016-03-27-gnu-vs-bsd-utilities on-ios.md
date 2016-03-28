@@ -4,7 +4,7 @@ title: GNU vs BSD utilities on iOS
 description: A closer look at what the iosbinpack means for the future of jailbreaking.
 ---
 
-Surprise surprise, the Apple TV can now be jailbroken again! Hooray! But that’s not why I’m writing. No, something more (or less) interesting is with this jailbreak. It doesn’t come with saurik’s core utilities from Telesphoreo, it includes binaries from [https://opensource.apple.com](https://opensource.apple.com), compiled by none other than Jonathan Levin (AKA [@Morpheus______](http://twitter.com/Morpheus______). I call these iOS binaries the “iosbinpack” (based on its filename, of course).
+Surprise surprise, the Apple TV can now be jailbroken again! Hooray! But that’s not why I’m writing. No, something more (or less) interesting is with this jailbreak. It doesn’t come with saurik’s core utilities from Telesphoreo, it includes binaries from [https://opensource.apple.com](https://opensource.apple.com), compiled by none other than Jonathan Levin (AKA [@Morpheus______](http://twitter.com/Morpheus______)). I call these iOS binaries the “iosbinpack” (based on its filename, of course).
 
 Why is this important? Well, there are a couple of things:
 
@@ -23,7 +23,7 @@ The binaries, for the most part, are very good. They’re much more recent than 
 Here are some tools I’ve ran into issues with, which plague 32-bit and 64-bit devices:
 
 - login: it just doesn’t work. I don’t know why, but it wouldn’t let me enter the Terminal at any time. saurik’s version worked fine. 64-bit version works fine.
-- zsh: It seems like one of the libraries/files it requires is malformed, specifically `/usr/local/lib/zsh/5.0.8/zsh/zle.so`.
+- zsh: It seems like one of the libraries/files it requires is malformed, specifically /usr/local/lib/zsh/5.0.8/zsh/zle.so.
 - sysctl: very broken, also vnode errors.
 - kextstat: does not work at all.
 - ioreg: missing a few things and isn’t up to date.

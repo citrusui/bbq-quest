@@ -2,6 +2,7 @@
 layout: post
 title: Pangu8 (for Mac)
 description: Taking a look under the hood of Pangu8 to see what it does.
+image: pangu8.png
 ---
 
 **Update:** Pangu fixed this issue a long time ago and nobody seemed to notice it was resolved.

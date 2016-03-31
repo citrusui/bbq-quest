@@ -1,4 +1,4 @@
-# citrusui blog
+# [citrusui blog](https://blog.citrusui.me)
 
 Just a programmer's [Jeykll](https://jekyllrb.com) blog, using [Poole](http://getpoole.com).
 

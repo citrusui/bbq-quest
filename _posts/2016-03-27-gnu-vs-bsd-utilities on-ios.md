@@ -17,16 +17,16 @@ In a nutshell, these are the tools every developer needs. It comes with a bunch 
 
 Because Pangu thought these binaries were good enough to use for the tvOS 9.0.x jailbreak, I decided to give them a try on iOS.
 
-Note: don’t try installing the iosbinpack on anything device that’s running iOS 6 or lower — it won’t work.
+**Note:** don’t try installing the iosbinpack on anything device that’s running iOS 6 or lower — it won’t work.
 
 The binaries, for the most part, are very good. They’re much more recent than the ones on Telesphoreo (which date back to 2009!). I do have several issues, though, (apart from them being BSD) which I believe should be addressed before I plan on compiling them into a Cydia package for others to use.
 
-Here are some tools I’ve ran into issues with, which plague 32-bit and 64-bit devices:
+Here are some tools I’ve ran into issues with, which may plague 32-bit and 64-bit devices:
 
 - login: it just doesn’t work. I don’t know why, but it wouldn’t let me enter the Terminal at any time. saurik’s version worked fine. 64-bit version works fine.
 - zsh: It seems like one of the libraries/files it requires is malformed, specifically /usr/local/lib/zsh/5.0.8/zsh/zle.so.
 - sysctl: very broken, also vnode errors.
-- kextstat: does not work at all.
+- kextstat: does not work at all. **Update:** it works now!
 - ioreg: missing a few things and isn’t up to date.
 
 ### Here’s the kicker.
@@ -35,4 +35,4 @@ GNU and BSD utilities are slightly, but very different. As I said above, saurik 
 
 You can use the iosbinpack all you want — I’m not forcing you to stick with GNU. However, if you want to revert back to GNU, it’s not always easy. While some GNU utilities are on Telesphoreo, like diskdev-cmds and file-cmds, others are not — they’re bundled with stock iOS. Just keep that in mind.
 
-Thanks to [@ReddestDream](https://twitter.com/ReddestDream) for contributing to this article. I really appreciate it!
+Thanks to [@ReddestDream](https://twitter.com/ReddestDream) and [@parrotgeek1](https://twitter.com/parrotgeek1) for contributing to this article. I really appreciate it!

@@ -26,7 +26,7 @@ Here are some tools I’ve ran into issues with, which may plague 32-bit and 64-
 - login: it just doesn’t work. I don’t know why, but it wouldn’t let me enter the Terminal at any time. saurik’s version worked fine. 64-bit version works fine.
 - zsh: It seems like one of the libraries/files it requires is malformed, specifically /usr/local/lib/zsh/5.0.8/zsh/zle.so.
 - sysctl: very broken, also vnode errors.
-- kextstat: does not work at all. **Update:** it works now!
+- kextstat: does not work at all.
 - ioreg: missing a few things and isn’t up to date.
 
 ### Here’s the kicker.

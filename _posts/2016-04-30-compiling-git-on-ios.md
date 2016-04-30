@@ -1,0 +1,79 @@
+---
+layout: post
+title: Compiling Git on iOS
+description: Set up a development environment on your device so you can compile Git!
+image: git.png
+---
+
+*Skip this part if you came here just for the tutorial.*
+
+As a heavy iOS user, I've always longed for customizability. The ability to do what you want with the devices you've bought. 
+
+I consider myself a programmer... maybe even a developer. It may be surprising to some of you that I find developing on mobile devices to be much easier than on desktop. 
+
+There's just something so unique about having a computer on your pocket. iOS is capable of so much more than Apple makes it to be.
+
+Luckily, there exists the iOS jailbreak. And with that, endless potential. Thanks to saurik, we have a slew of command line utilities that we are used to using on OS X or Linux. However... some are severely out of date, dating back to 2009, around the time of iPhone OS 3.0.
+
+I decided to tackle this problem myself. iOS shares many low-level mechanics with OS X, therefore perhaps it will be possible to compile newer tools directly on-device!
+
+### Tutorial
+
+Before we begin, you will need a few prerequisites:
+
+- a jailbroken device on iOS 5 or newer
+- about 10-20 minutes of free time 
+
+That's it! Now let's get to it.
+
+First, launch Cydia. If you've just jailbroken, wait for Cydia to prepare the filesystem and restart your device.
+
+You're going to need to add a repository. Tap Sources, tap add, select the text in the alert box, and paste the following URL into the alert box:
+
+`https://coolstar.org/publicrepo`
+
+Now, wait for your sources to refresh. This should only take a few seconds.
+
+When that process is done, you are going to need to install the following packages: Make, LLVM+Clang, Darwin CC Tools, gettext, Perl, and MobileTerminal. Make sure you install Darwin CC Tools from the BigBoss repository.
+
+If you don't have them already, install iFile and/or Filza. Experienced users can skip this step if they are familiar with the command line. 
+
+In order to compile anything, you're going to need an SDK, downloaded either from [Xcode](https://developer.apple.com/xcode/) or [jbdevs.org/sdks/](https://jbdevs.org/sdks/). Using iFile or Filza, extract the compressed SDK to your device to some folder on `/var/`, such as `/var/sdks/`. If you have Theos installed, you're going to want to install the SDK to `/var/theos/sdks/`.
+
+Suppose I chose to download the iOS 9.3 SDK and I had Theos installed. My path to the SDK would be `/var/theos/sdks/iPhoneOS9.3.sdk`. For the sake of this tutorial, I am going to leave the SDK path as a placeholder (/path/to/sdk/iPhoneOS.sdk) that you can adjust to your liking.
+
+Assuming you already have iFile or Filza open, let's symlink a couple of files. You can automate this process in a shell script by prefixing each line with `ln -s`.
+
+- /usr/bin/clang /usr/bin/cc
+
+- /usr/bin/ranlib /usr/bin/armv7-apple-darwin11-ranlib
+
+- /usr/local/bin/perl /usr/bin/perl
+
+- /usr/include/openssl /path/to/sdk/iPhoneOS.sdk/usr/include/openssl
+
+- /usr/include/curl /path/to/sdk/iPhoneOS.sdk/usr/include/curl
+
+- /usr/include/libintl.h /path/to/sdk/iPhoneOS.sdk/usr/include/libintl.h
+
+- /usr/include/expat.h /path/to/sdk/iPhoneOS.sdk/usr/include/expat.h
+
+- /usr/include/expat_external.h /path/to/sdk/iPhoneOS.sdk/usr/include/expat_external.h
+
+- /usr/lib/libintl.8.0.2.dylib /path/to/sdk/iPhoneOS.sdk/usr/lib/libintl.dylib
+
+- /usr/lib/libcurl.4.dylib /path/to/sdk/iPhoneOS.sdk/usr/lib/libcurl.dylib
+
+- /usr/lib/libssl.0.9.8.dylib /path/to/sdk/iPhoneOS.sdk/usr/lib/libssl.dylib
+
+- /usr/lib/libcrypto.0.9.8.dylib /path/to/sdk/iPhoneOS.sdk/usr/lib/libcrypto.dylib
+
+- /usr/lib/libexpat.1.5.2.dylib /path/to/sdk/iPhoneOS.sdk/usr/lib/libexpat.dylib
+
+After that's done, you're going to want to grab the Git source code (available [here](https://git-scm.com)). Unzip the source code to somewhere like `/var/mobile/git`.
+
+Time to launch MobileTerminal. The first command you're going to run is `su`, which will ensure you have necessary permissions to build Git. The default password is `alpine` (all lowercase). Next, run `cd git` to open the Git source code directory. Finally, run the following script in MobileTerminal (replace the SDK path as necessary):
+
+```make install prefix="/usr" CFLAGS="-isysroot /path/to/iPhoneOS.sdk" DESTDIR="/var/mobile/git-build/" NO_INSTALL_HARDLINKS="1"```
+
+Depending on your device, compilation time might take a few minutes. If everything went well, you should see a folder in `/var/mobile/` called `git-build`. Hooray! You built Git! Now you can package the compiled binaries into a Debian package, if you'd like.

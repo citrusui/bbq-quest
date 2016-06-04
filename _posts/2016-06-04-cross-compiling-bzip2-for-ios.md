@@ -32,17 +32,7 @@ All right, what does this script do? Well...
 
 You may notice that a file, aptly named "bzip2-control" is specified in this script too. This is a file that you'll need to add manually, in the same directory that you've saved bzip2.sh to. It should look something like this:
 
-```
-Package: bzip2
-Priority: important
-Section: Archiving
-Maintainer: Your Name <your@email.com>
-Architecture: iphoneos-arm
-Version: 
-Description: Freely available high-quality data compressor
-Homepage: http://www.bzip.org/
-
-```
+{% gist e1f79e7b7b884081e48223946be0e81c %}
 
 Make sure you leave a blank line at the bottom of your control file, or else `dpkg-deb` will return an error.
 

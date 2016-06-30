@@ -7,9 +7,9 @@ layout: default
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
   <img style="display: block; margin-left: auto; margin-right: auto" src="{{ site.url }}/public/images/{{ page.image }}" width="150">
   {{ content }}
+  <br/>
+  {% include share.html %}
 </article>
-
-{% include share.html %}
 
 {% if site.related_posts != empty %}
 <aside class="related">

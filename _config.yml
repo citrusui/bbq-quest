@@ -1,36 +1,27 @@
-# Permalinks
 permalink:           pretty
 
-# Setup
 title:               citrusui
-tagline:             Just a programmer.
+tagline:             I make websites.
 url:                 https://citrusui.github.io
 twitter:             citrusui
 analytics:           UA-64808768-3
-enforce_ssl: citrusui.github.io
 paginate:            2
 paginate_path:       "/page/:num/"
 baseurl:             ""
 
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
 sass:
   sass_dir:          _sass
   style:            :compressed
 
-# About/contact
 author:
   name:              Avery Magnotti
   url:               https://twitter.com/citrusui
   email:             averymagnotti@outlook.com
 
-# Custom vars
 version:             1.0
 github:
   repo:              https://github.com/citrusui/citrusui.github.io
 
-# Gems
 gems:
   - jekyll-paginate
   - jekyll-gist

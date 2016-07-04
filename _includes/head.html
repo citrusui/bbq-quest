@@ -9,7 +9,7 @@
   <meta name="twitter:site" content="@citrusui">
   <meta property="og:description" content="{{ page.description }}">
   <meta property="og:image" content="{{ site.url }}/public/images/{{ page.image }}">
-  <meta property="og:title" content="{% if page.title == " Home " %}{{ site.tagline }} &middot; {{ site.title }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}">
+  <meta property="og:title" content="{% if page.title == "Home" %} {{ site.title }} &middot; {{ site.tagline }} {% else %} {{ page.title }} &middot; {{ site.title }} {% endif %}">
   <meta property=og:url content="{{ site.url}}">
 
   <title>{% if page.title == "Home" %} {{ site.title }} &middot; {{ site.tagline }} {% else %} {{ page.title }} &middot; {{ site.title }} {% endif %}</title>

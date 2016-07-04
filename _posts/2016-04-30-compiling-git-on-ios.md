@@ -44,7 +44,22 @@ Suppose I chose to download the iOS 9.3 SDK and I had Theos installed. My path t
 
 Assuming you already have iFile or Filza open, let's create and run a shell script. This will symlink the essential programs and headers to their appropriate places.
 
-{% gist 38cefedf46773982a2abcd152c7234c3 %}
+```
+#!/bin/bash
+ln -s /usr/bin/clang /usr/bin/cc
+ln -s /usr/bin/ranlib /usr/bin/armv7-apple-darwin11-ranlib
+ln -s /usr/local/bin/perl /usr/bin/perl
+ln -s /usr/include/openssl /path/to/sdk/iPhoneOS.sdk/usr/include/openssl
+ln -s /usr/include/curl /path/to/sdk/iPhoneOS.sdk/usr/include/curl
+ln -s /usr/include/libintl.h /path/to/sdk/iPhoneOS.sdk/usr/include/libintl.h
+ln -s /usr/include/expat.h /path/to/sdk/iPhoneOS.sdk/usr/include/expat.h
+ln -s /usr/include/expat_external.h /path/to/sdk/iPhoneOS.sdk/usr/include/expat_external.h
+ln -s /usr/lib/libintl.8.0.2.dylib /path/to/sdk/iPhoneOS.sdk/usr/lib/libintl.dylib
+ln -s /usr/lib/libcurl.4.dylib /path/to/sdk/iPhoneOS.sdk/usr/lib/libcurl.dylib
+ln -s /usr/lib/libssl.0.9.8.dylib /path/to/sdk/iPhoneOS.sdk/usr/lib/libssl.dylib
+ln -s /usr/lib/libcrypto.0.9.8.dylib /path/to/sdk/iPhoneOS.sdk/usr/lib/libcrypto.dylib
+ln -s /usr/lib/libexpat.1.5.2.dylib /path/to/sdk/iPhoneOS.sdk/usr/lib/libexpat.dylib
+```
 
 After that's done, you're going to want to grab the Git source code (available [here](https://git-scm.com)). Unzip the source code to somewhere like `/var/mobile/git`.
 

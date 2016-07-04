@@ -2,11 +2,15 @@
 layout: default
 title: "404: Not Found"
 permalink: 404.html
+image: logo.png
 ---
 
 <div class="page">
   <h1 class="page-title">404: Page not found</h1>
-  <p class="lead">Sorry, I've misplaced that URL or it's pointing to something that doesn't exist. <a href="{{ site.url }}/">Head back home</a> to try finding it again.</p>
+  <p class="lead">
+    Sorry, I've misplaced that URL or it's pointing to something that doesn't exist.
+    <a href="{{ site.url }}/">Head back home</a> to try finding it again.
+  </p>
 </div>
 
 {% if site.related_posts != empty %}
@@ -14,12 +18,14 @@ permalink: 404.html
   <h3>Recent posts</h3>
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
-      <li>
-        <a href="{{ site.url }}{{ post.url }}">
+    <li>
+      <a href="{{ site.url }}{{ post.url }}">
           {{ post.title }}
-          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
+          <small>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+            </small>
         </a>
-      </li>
+    </li>
     {% endfor %}
   </ul>
 </aside>

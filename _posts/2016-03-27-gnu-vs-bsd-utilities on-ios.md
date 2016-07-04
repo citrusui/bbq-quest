@@ -17,7 +17,7 @@ In a nutshell, these are the tools every developer needs. It comes with a bunch 
 
 Because Pangu thought these binaries were good enough to use for the tvOS 9.0.x jailbreak, I decided to give them a try on iOS.
 
-**Note:** don’t try installing the iosbinpack on anything device that’s running iOS 6 or lower — it won’t work.
+**Note:** don’t try installing the iosbinpack on anything device that’s running iOS 6 or lower — it won’t work.
 
 The binaries, for the most part, are very good. They’re much more recent than the ones on Telesphoreo (which date back to 2009!). I do have several issues, though, (apart from them being BSD) which I believe should be addressed before I plan on compiling them into a Cydia package for others to use.
 
@@ -31,8 +31,8 @@ Here are some tools I’ve ran into issues with, which may plague 32-bit and 64-
 
 ### Here’s the kicker.
 
-GNU and BSD utilities are slightly, but very different. As I said above, saurik uses GNU utilities. He even relies on using their special GNU arguments in various parts of Cydia. Therefore, switching over to BSD is not ideal, at least at this time. Tools like tar, cp, and chown act very differently between BSD and GNU. I talked to saurik about this; he has no plans to work around this. After pondering back and forth, I’ve attempted to stay neutral, and stay with GNU utilities, mainly because they “just work”. Yes, they are old and hacky, but they work. Perhaps Pangu will bundle the iosbinpack in the next jailbreak — who knows?
+GNU and BSD utilities are slightly, but very different. As I said above, saurik uses GNU utilities. He even relies on using their special GNU arguments in various parts of Cydia. Therefore, switching over to BSD is not ideal, at least at this time. Tools like tar, cp, and chown act very differently between BSD and GNU. I talked to saurik about this; he has no plans to work around this. After pondering back and forth, I’ve attempted to stay neutral, and stay with GNU utilities, mainly because they “just work”. Yes, they are old and hacky, but they work. Perhaps Pangu will bundle the iosbinpack in the next jailbreak — who knows?
 
-You can use the iosbinpack all you want — I’m not forcing you to stick with GNU. However, if you want to revert back to GNU, it’s not always easy. While some GNU utilities are on Telesphoreo, like diskdev-cmds and file-cmds, others are not — they’re bundled with stock iOS. Just keep that in mind.
+You can use the iosbinpack all you want — I’m not forcing you to stick with GNU. Just note that reinstalling GNU utilities will be a long and tedious process.
 
 Thanks to [@ReddestDream](https://twitter.com/ReddestDream) and [@parrotgeek1](https://twitter.com/parrotgeek1) for contributing to this article. I really appreciate it!

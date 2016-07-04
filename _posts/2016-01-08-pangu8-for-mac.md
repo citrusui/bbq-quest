@@ -13,7 +13,7 @@ For whatever reason, Pangu8 mysteriously broke in 2014/2015. Meaning, whenever y
 
 Pangu *resolved this* by pointing to new URLs to fetch Xcode and DeveloperDiskImage.
 
-Here are a couple of URLs that Pangu uses in their iOS 8.0 — 8.1 jailbreak utility for Mac. Note: these strings are *not* in the Windows version. Perhaps they are obfuscated…?
+Here are a couple of URLs that Pangu uses in their iOS 8.0 -- 8.1 jailbreak utility for Mac. Note: these strings are *not* in the Windows version. Perhaps they are obfuscated…?
 
 - [http://pangu.io/8_update.plist](http://pangu.io/8_update.plist) (checks for updates to Pangu8)
 
@@ -23,6 +23,19 @@ Here are a couple of URLs that Pangu uses in their iOS 8.0 — 8.1 jailbreak
 
 - [http://xcode.pangu.io/...](http://xcode.pangu.io/download_key.plist) (downloads Xcode and mounts DeveloperDiskImage)
 
-And if you're curious, here's a gist of the latter URL, which changed a couple of times:
+And if you're curious, here's a plist of the latter URL:
 
-{% gist 544f0eb82d99a6189958 %}
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cookie</key>
+	<string>downloadKey=</string>
+	<key>type</key>
+	<integer>1</integer>
+	<key>url</key>
+	<string>http://dl.pangu.25pp.com/jb/inject.bundle.xxx</string>
+</dict>
+</plist>
+```

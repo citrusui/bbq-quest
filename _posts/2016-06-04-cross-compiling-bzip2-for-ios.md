@@ -15,7 +15,51 @@ OK, now that you've got the SDK and Toolchain, it's time to extract them. Suppos
 
 Now, its time to download a script that automates the compiling process. Make sure you run this process as root or sudo!
 
-{% gist 806037423d954191b11b36a45995be08 %}
+```
+#!/bin/bash
+rm -rf ~/built/bzip2*
+VER=1.0.6
+CHAIN=~/toolchain/linux/iphone/bin/armv7-apple-darwin11
+AR=$CHAIN-ar
+CC=$CHAIN-clang
+RANLIB=$CHAIN-ranlib
+SDK=/home/citrusui/sdks/iPhoneOS9.3.sdk
+CFLAGS="-arch armv7 -arch arm64 -isysroot $SDK"
+LDFLAGS="-Wl,-segalign,4000"
+PREFIX=~/built/bzip2/var/stash/usr
+apt install bison clang libcurl4-openssl-dev xutils-dev
+if [ -f bzip2-$VER.tar.gz ] && [ -d bzip2* ]; then
+	echo "Already downloaded."
+	cd bzip2*
+	make clean
+	make install CC="$CC" CFLAGS="$CFLAGS" RANLIB="$RANLIB" AR=$AR LDFLAGS="$LDFLAGS" PREFIX="$PREFIX"
+	cd ~/built/bzip2
+	lndir var/stash
+	mkdir DEBIAN
+	cd DEBIAN
+  	cp ~/build/bzip2-control control
+  	sed '/^Version:/ s/$/ $1.0.6/' control
+	cd ../..
+	dpkg-deb -b bzip2
+	mv bzip2.deb bzip2_iphoneos-arm.deb
+	exit 0
+fi
+curl -O http://www.bzip.org/$VER/bzip2-$VER.tar.gz
+echo "Downloading..."
+tar -xvzf bzip2-$VER.tar.gz
+cd bzip2*
+make clean
+make install CC="$CC" CFLAGS="$CFLAGS" RANLIB="$RANLIB" AR=$AR LDFLAGS="$LDFLAGS" PREFIX="$PREFIX"
+cd ~/built/bzip2
+lndir var/stash
+mkdir DEBIAN
+cd DEBIAN
+cp ~/build/bzip2-control control
+sed -i '/^Version:/ s/$/1.0.6/' control
+cd ../..
+dpkg-deb -b bzip2
+mv bzip2.deb bzip2_iphoneos-arm.deb
+```
 
 All right, what does this script do? Well...
 
@@ -32,10 +76,19 @@ All right, what does this script do? Well...
 
 You may notice that a file, aptly named "bzip2-control" is specified in this script too. This is a file that you'll need to add manually, in the same directory that you've saved bzip2.sh to. It should look something like this:
 
-{% gist e1f79e7b7b884081e48223946be0e81c %}
+```
+Package: bzip2
+Priority: important
+Section: Archiving
+Maintainer: Your Name <your@email.com>
+Architecture: iphoneos-arm
+Version: 
+Description: Freely available high-quality data compressor
+Homepage: http://www.bzip.org/
+```
 
 Make sure you leave a blank line at the bottom of your control file, or else `dpkg-deb` will return an error.
 
-**Important Note:** I left out a step that involves running `ldid -S` on all of the bzip2 binaries. Without this step, iOS will refuse to run bzip2. I'll be adding this step in sometime later.
+**Important Note:** I left out a step that involves running `ldid -S` on all of the bzip2 binaries. Without this step, iOS will refuse to run bzip2 (I think).
 
 Hopefully this tutorial helped you cross-compile bzip2 for iOS! Feel free to upload the generated package to your personal Cydia repository. If I manage to get Git to properly cross-compile, I might make a follow-up to the previous blog post.

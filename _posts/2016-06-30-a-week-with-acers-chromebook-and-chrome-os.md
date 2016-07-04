@@ -17,7 +17,7 @@ The touchpad is quite tricky to use. You have three gestures: swipe with two fin
 
 ## Chrome OS
 
-While I didn’t expect much from the operating system, I think I got everything I wanted. It doesn’t run many real “apps”, but that’s fine -- most things I do are online or in the cloud. It has a decent file manager, which mounts .zip files and images just like you’d expect. There’s a built-in Calculator, which is nice for quick calculations, and also a Camera app, which works kinda like Photo Booth on the iPad and Mac. Strangely enough, Google bundles what I assume is a third-party app called “Zip Extractor”, which just extracts the contents of a .zip archive and uploads it to your Google Drive. I wonder why that app is here -- perhaps it existed before Chrome OS had a file manager?
+While I didn’t expect much from the operating system, I think I got everything I wanted. It doesn’t run many real “apps”, but that’s fine -- most things I do are online or in the cloud. It has a decent file manager, which mounts .zip files and images just like you’d expect. There’s a built-in Calculator, which is nice for quick calculations, and also a Camera app, which works kinda like Photo Booth on the iPad and Mac. Strangely enough, Google bundles what I assume is a third-party app called “Zip Extractor”, which just extracts the contents of a .zip archive and uploads it to your Google Drive. I wonder why that app is here -- perhaps it existed before Chrome OS had a file manager?
 
 ## Hacking it up
 

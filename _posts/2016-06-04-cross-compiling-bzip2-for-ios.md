@@ -40,7 +40,7 @@ if [ -f bzip2-$VER.tar.gz ] && [ -d bzip2* ]; then
   	cp ~/build/bzip2-control control
   	sed '/^Version:/ s/$/ $1.0.6/' control
 	cd ../..
-	dpkg-deb -b bzip2
+	dpkg-deb -Zgzip -b bzip2
 	mv bzip2.deb bzip2_iphoneos-arm.deb
 	exit 0
 fi
@@ -57,7 +57,7 @@ cd DEBIAN
 cp ~/build/bzip2-control control
 sed -i '/^Version:/ s/$/1.0.6/' control
 cd ../..
-dpkg-deb -b bzip2
+dpkg-deb -Zgzip -b bzip2
 mv bzip2.deb bzip2_iphoneos-arm.deb
 ```
 

@@ -13,9 +13,9 @@ I consider myself a programmer... maybe even a developer. It may be surprising t
 
 There's just something so unique about having a computer on your pocket. iOS is capable of so much more than Apple makes it to be.
 
-Luckily, there exists the iOS jailbreak. And with that, endless potential. Thanks to saurik, we have a slew of command line utilities that we are used to using on OS X or Linux. However... some are severely out of date, dating back to 2009, around the time of iPhone OS 3.0.
+Luckily, there exists the iOS jailbreak. And with that, endless potential. Thanks to saurik, we have a slew of command line utilities that we are used to using on macOS or Linux. However... some are severely out of date, dating back to 2009, around the time of iPhone OS 3.0.
 
-I decided to tackle this problem myself. iOS shares many low-level mechanics with OS X, therefore perhaps it will be possible to compile newer tools directly on-device!
+I decided to tackle this problem myself. iOS shares many low-level mechanics with macOS, therefore perhaps it will be possible to compile newer tools directly on-device!
 
 ### Tutorial
 
@@ -38,9 +38,9 @@ When that process is done, you are going to need to install the following packag
 
 If you don't have them already, install iFile and/or Filza. Experienced users can skip this step if they are familiar with the command line. 
 
-In order to compile anything, you're going to need an SDK, downloaded either from [Xcode](https://developer.apple.com/xcode/) or [jbdevs.org/sdks/](https://jbdevs.org/sdks/). Using iFile or Filza, extract the compressed SDK to your device to some folder on `/var/`, such as `/var/sdks/`. If you have Theos installed, you're going to want to install the SDK to `/var/theos/sdks/`.
+In order to compile anything, you're going to need an SDK, downloaded from [Xcode](https://developer.apple.com/xcode/). Using iFile or Filza, extract the compressed SDK to your device to some folder on `/var/`, such as `/var/sdks/`. If you have Theos installed, you're going to want to install the SDK to `/var/theos/sdks/`.
 
-Suppose I chose to download the iOS 9.3 SDK and I had Theos installed. My path to the SDK would be `/var/theos/sdks/iPhoneOS9.3.sdk`. For the sake of this tutorial, I am going to leave the SDK path as a placeholder (/path/to/sdk/iPhoneOS.sdk) that you can adjust to your liking.
+Suppose I chose to download Xcode 7.3.1 (with the iOS 9.3 SDK) and I had Theos installed. My path to the SDK would be `/var/theos/sdks/iPhoneOS9.3.sdk`. For the sake of this tutorial, I am going to leave the SDK path as a placeholder (/path/to/sdk/iPhoneOS.sdk) that you can adjust to your liking.
 
 Assuming you already have iFile or Filza open, let's create and run a shell script. This will symlink the essential programs and headers to their appropriate places.
 

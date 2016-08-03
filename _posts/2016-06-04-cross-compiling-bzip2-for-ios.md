@@ -7,7 +7,7 @@ image: bzip2.png
 
 As detailed in my previous blog post, I showed you how to compile Git using an on-device toolchain. Now, I'll show you how to do something similar, but instead, on Linux.
 
-First things first, we're going to need the iOS SDK and Linux Toolchain. You can download the former from [this website](https://jbdevs.org/sdks/) and the latter from [here](https://developer.angelxwind.net/Linux/).
+First things first, we're going to need the iOS SDK and Linux Toolchain. You can download the former from [this website](https://sdks.website) and the latter from [here](https://developer.angelxwind.net/Linux/).
 
 This tutorial assumes you are running Ubuntu 16.04 LTS. If this does not apply to you, then you may need to make some modifications to the following processes.
 

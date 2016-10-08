@@ -1,7 +1,8 @@
 permalink:           pretty
 
 title:               citrusui
-tagline:             I make websites.
+tagline:             Blog
+flair:               Software and much more.
 url:                 https://citrusui.github.io
 twitter:             citrusui
 paginate:            2

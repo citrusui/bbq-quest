@@ -14,7 +14,12 @@
 
   <title>{% if page.title == "Home" %} {{ site.title }} &middot; {{ site.tagline }} {% else %} {{ page.title }} &middot; {{ site.title }} {% endif %}</title>
 
-  <style>pre{white-space:pre-wrap;word-wrap:break-word}</style>
+  <style>
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word
+    }
+  </style>
 
   <link rel="apple-touch-icon" href="{{ site.url }}/public/apple-touch-icon.png">
   <link rel="icon" href="{{ site.url }}/public/favicon.png">
@@ -22,4 +27,5 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml">
   <link rel="canonical" href="{{ site.url }}">
   <link rel="stylesheet" href="{{ site.url }}/styles.css">
+  <link rel="stylesheet" href="{{ site.cdn.pace-theme }}" integrity="{{ site.sri.pace-theme }}" crossorigin="anonymous">
 </head>

@@ -7,20 +7,28 @@ url:                 https://blog.citrusui.me
 twitter:             citrusui
 paginate:            2
 paginate_path:       "/page/:num/"
-baseurl:             ""
 
 sass:
-  sass_dir:          _sass
-  style:            :compressed
+  sass_dir: _sass
+  style: :compressed
+
+cdn:
+  pace: https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js
+  pace-theme: https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css
+  turbolinks: https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0/turbolinks.min.js
+
+sri:
+  pace: sha256-EPrkNjGEmCWyazb3A/Epj+W7Qm2pB9vnfXw+X6LImPM=
+  pace-theme: sha256-DNn0Y4C4mm62z/egeR6gp2SHN2vSM737qvWjDDuO0y0=
+  turbolinks: sha256-HUtkNsGc3BlCNQTNPUr5JsjW0wQFeU4nfYOEuUcxptU=
 
 author:
-  name:              Avery Magnotti
-  url:               https://twitter.com/citrusui
-  email:             averymagnotti@outlook.com
+  name: Avery Magnotti
+  url: https://twitter.com/citrusui
+  email: citrusui@users.noreply.github.com
 
-version:             1.0
 github:
-  repo:              https://github.com/citrusui/blog
+  repo: https://github.com/citrusui/blog
 
 gems:
   - jekyll-feed

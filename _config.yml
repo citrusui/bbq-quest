@@ -4,7 +4,7 @@ title:               citrusui
 tagline:             Blog
 flair:               Software and much more.
 url:                 https://blog.citrusui.me
-twitter:             citrusui
+twitter:             citrusuiblog
 paginate:            2
 paginate_path:       "/page/:num/"
 

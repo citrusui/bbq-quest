@@ -9,7 +9,7 @@
     <header class="masthead">
       <h3 class="masthead-title">
           <a href="{{ site.url }}/" title="Home">{{ site.title }}</a>
-          <small>{{ site.flair }}</small>
+          <small>{{ site.tagline }}</small>
         </h3>
     </header>
 
@@ -19,11 +19,12 @@
 
     <footer class="footer">
       <small>
-          &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>.
-          All rights reserved. <a href="{{ site.github.repo }}">View Source.</a>
+          &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time> Avery Magnotti.
+          All rights reserved. <a href="{{ site.github.repo }}">{% octicon code width:12 aria-label:"View Source" %} View Source.</a>
         </small>
     </footer>
   </div>
+  <script>document.addEventListener("touchstart", function(){});</script>
   <script src="{{ site.cdn.turbolinks }}" integrity="{{ site.sri.turbolinks }}" crossorigin="anonymous"></script>
   <script src="{{ site.cdn.pace }}" integrity="{{ site.sri.pace }}" crossorigin="anonymous"></script>
   <script>

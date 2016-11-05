@@ -11,6 +11,8 @@ It you don’t already know, Pangu8 is an iOS jailbreaking tool used to install 
 
 For whatever reason, Pangu8 mysteriously broke in 2014/2015. Meaning, whenever you wanted to run the tool and jailbreak, you couldn’t.
 
+<!-- break -->
+
 Pangu *resolved this* by pointing to new URLs to fetch Xcode and DeveloperDiskImage.
 
 Here are a couple of URLs that Pangu uses in their iOS 8.0 -- 8.1 jailbreak utility for Mac. Note: these strings are *not* in the Windows version. Perhaps they are obfuscated…?

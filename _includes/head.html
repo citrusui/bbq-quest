@@ -9,16 +9,23 @@
   <meta name="twitter:site" content="@citrusui">
   <meta property="og:description" content="{{ page.description }}">
   <meta property="og:image" content="{{ site.url }}/public/images/{{ page.image }}">
-  <meta property="og:title" content="{% if page.title == " Home " %} {{ site.title }} &middot; {{ site.tagline }} {% else %} {{ page.title }} &middot; {{ site.title }} {% endif %}">
-  <meta property=og:url content="{{ site.url}}">
+  <meta property="og:title" content="{% if page.title == " Home " %} {{ site.title }} {% else %} {{ page.title }} {% endif %}">
+  <meta property=og:url content="{{ site.url }}">
 
   <title>{% if page.title == "Home" %} {{ site.title }} &middot; {{ site.tagline }} {% else %} {{ page.title }} &middot; {{ site.title }} {% endif %}</title>
 
   <style>
-    pre {
-      white-space: pre-wrap;
-      word-wrap: break-word
-    }
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word
+  }
+  .octicon {
+    vertical-align: center;
+    fill: currentColor;
+  }
   </style>
 
   <link rel="apple-touch-icon" href="{{ site.url }}/public/apple-touch-icon.png">

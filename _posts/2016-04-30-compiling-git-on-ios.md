@@ -5,24 +5,10 @@ description: Set up a development environment on your device so you can compile 
 image: git.png
 ---
 
-*Skip this part if you came here just for the tutorial.*
-
-As a heavy iOS user, I've always longed for customizability. The ability to do what you want with the devices you've bought. 
-
-I consider myself a programmer... maybe even a developer. It may be surprising to some of you that I find developing on mobile devices to be much easier than on desktop. 
-
-There's just something so unique about having a computer on your pocket. iOS is capable of so much more than Apple makes it to be.
-
-Luckily, there exists the iOS jailbreak. And with that, endless potential. Thanks to saurik, we have a slew of command line utilities that we are used to using on macOS or Linux. However... some are severely out of date, dating back to 2009, around the time of iPhone OS 3.0.
-
-I decided to tackle this problem myself. iOS shares many low-level mechanics with macOS, therefore perhaps it will be possible to compile newer tools directly on-device!
-
-### Tutorial
-
 Before we begin, you will need a few prerequisites:
 
 - a jailbroken device on iOS 5 or newer
-- about 10-20 minutes of free time 
+- about 10-20 minutes of free time
 
 That's it! Now let's get to it.
 
@@ -30,13 +16,15 @@ First, launch Cydia. If you've just jailbroken, wait for Cydia to prepare the fi
 
 You're going to need to add a repository. Tap Sources, tap add, select the text in the alert box, and paste the following URL into the alert box:
 
+<!-- break -->
+
 `https://coolstar.org/publicrepo`
 
 Now, wait for your sources to refresh. This should only take a few seconds.
 
 When that process is done, you are going to need to install the following packages: Make, LLVM+Clang, Darwin CC Tools, gettext, Perl, and MobileTerminal. Make sure you install Darwin CC Tools from the BigBoss repository.
 
-If you don't have them already, install iFile and/or Filza. Experienced users can skip this step if they are familiar with the command line. 
+If you don't have them already, install iFile and/or Filza. Experienced users can skip this step if they are familiar with the command line.
 
 In order to compile anything, you're going to need an SDK, downloaded from [Xcode](https://developer.apple.com/xcode/). Using iFile or Filza, extract the compressed SDK to your device to some folder on `/var/`, such as `/var/sdks/`. If you have Theos installed, you're going to want to install the SDK to `/var/theos/sdks/`.
 

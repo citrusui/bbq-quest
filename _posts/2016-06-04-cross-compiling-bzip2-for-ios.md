@@ -11,6 +11,8 @@ First things first, we're going to need the iOS SDK and Linux Toolchain. You can
 
 This tutorial assumes you are running Ubuntu 16.04 LTS. If this does not apply to you, then you may need to make some modifications to the following processes.
 
+<!-- break -->
+
 OK, now that you've got the SDK and Toolchain, it's time to extract them. Suppose my home directory was `/home/citrusui`.  Create two folders in this directory called `sdks` and `toolchain`, then unzip the files to these locations accordingly.
 
 Now, its time to download a script that automates the compiling process. Make sure you run this process as root or sudo!
@@ -82,7 +84,7 @@ Priority: important
 Section: Archiving
 Maintainer: Your Name <your@email.com>
 Architecture: iphoneos-arm
-Version: 
+Version:
 Description: Freely available high-quality data compressor
 Homepage: http://www.bzip.org/
 ```

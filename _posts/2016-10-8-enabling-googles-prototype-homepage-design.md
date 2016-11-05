@@ -11,7 +11,9 @@ image: google.png
 
 The other day, I randomly stumbled upon a new design for Google's homepage. Luckily, at the time, I was able to capture all the current cookies for my session and track down the specific cause of this design change.
 
-To start off, you're going need a desktop computer with [Chrome](https://www.google.com/chrome/) and [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?utm_source=chrome-app-launcher-info-dialog). Make sure you give the extension access in incognito mode via `chrome://extensions`.
+To start off, you're going need a desktop computer with [Chrome](https://www.google.com/chrome/) and [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg). Make sure you give the extension access in incognito mode via `chrome://extensions`.
+
+<!-- break -->
 
 Now, open a new incognito window (Command-Shift-N / CTRL+SHIFT+N) and navigate to Google. Then, click on the cookie icon at the top-right of Chrome (it should be to the left of the three vertical dots).
 

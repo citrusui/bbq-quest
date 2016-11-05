@@ -1,12 +1,12 @@
-permalink:           pretty
+permalink: pretty
 
-title:               citrusui
-tagline:             Blog
-flair:               Software and much more.
-url:                 https://blog.citrusui.me
-twitter:             citrusuiblog
-paginate:            2
-paginate_path:       "/page/:num/"
+title: citrusui blog
+tagline: Software and much more.
+url: https://blog.citrusui.me
+host: 0.0.0.0
+twitter: citrusuiblog
+paginate: 4
+paginate_path: "/page/:num/"
 
 sass:
   sass_dir: _sass
@@ -32,5 +32,6 @@ github:
 
 gems:
   - jekyll-feed
+  - jekyll-octicons
   - jekyll-paginate
   - jekyll-redirect-from

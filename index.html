@@ -19,14 +19,14 @@ image: logo.png
 
     <div class="pagination">
       {% if paginator.previous_page %}
-      <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.url }}"> <!-- {% octicon arrow-left aria-label:"See newer posts" %} --> Newer</a>
+      <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.url }}">Newer</a>
       {% else %}
-      <span class="pagination-item newer"> <!-- {% octicon arrow-left aria-label:"No newer posts available" %} --> Newer</span>
+      <span class="pagination-item newer">Newer</span>
       {% endif %}
       {% if paginator.next_page %}
-      <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.url }}">Older <!-- {% octicon arrow-right aria-label:"See older posts" %} --> </a>
+      <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.url }}">Older</a>
       {% else %}
-      <span class="pagination-item older">Older <!-- {% octicon arrow-right aria-label:"No older posts available" %} --> </span>
+      <span class="pagination-item older">Older</span>
       {% endif %}
     </div>
     </div>

@@ -10,7 +10,7 @@ Surprise surprise, the Apple TV can now be jailbroken again! Hooray! But that’
 Why is this important? Well, there are a couple of things:
 
 - all binaries must be compiled for arm64 on the new Apple TV. saurik’s utilities haven’t been compiled for 64-bit yet.
-- these binaries also happen to work on watchOS, which was proven jailbreak-able by Luca Todesco ([@qwertyoruiop](https://twitter.com/qwertyoruiop))
+- these binaries also happen to work on watchOS, which was proven jailbreak-able by Luca Todesco (qwertyoruiop)
 - the tools included are from BSD, not GNU, like saurik’s
 
 <!-- break -->

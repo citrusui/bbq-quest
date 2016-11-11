@@ -24,17 +24,9 @@
         </small>
     </footer>
   </div>
-  <script>document.addEventListener("touchstart", function(){});</script>
-  <script src="{{ site.cdn.turbolinks }}" integrity="{{ site.sri.turbolinks }}" crossorigin="anonymous"></script>
-  <script src="{{ site.cdn.pace }}" integrity="{{ site.sri.pace }}" crossorigin="anonymous"></script>
-  <script>
-    document.addEventListener('turbolinks:click', function() {
-      Pace.start();
-    });
-    document.addEventListener('turbolinks:render', function() {
-      Pace.stop();
-    });
-  </script>
+  {% if jekyll.environment == 'production' %}
+  {% include scripts.html %}
+  {% endif %}
 </body>
 
 </html>

@@ -1,38 +1,25 @@
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Avery Magnotti">
-  <meta name="theme-color" content="#e03431">
-  <meta name="description" content="{{ page.description }}">
+  <meta name="theme-color" content="{{ site.brand_color }}">
+  <meta name="description" content="{{ site.description }}">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:image" content="{{ site.url }}/public/images/{{ page.image }}">
-  <meta name="twitter:site" content="@citrusui">
+  <meta name="twitter:site" content="@{{ site.twitter }}">
   <meta property="og:description" content="{{ page.description }}">
   <meta property="og:image" content="{{ site.url }}/public/images/{{ page.image }}">
   <meta property="og:title" content="{% if page.title == " Home " %} {{ site.title }} {% else %} {{ page.title }} {% endif %}">
-  <meta property=og:url content="{{ site.url }}">
-
-  <title>{% if page.title == "Home" %} {{ site.title }} &middot; {{ site.tagline }} {% else %} {{ page.title }} &middot; {{ site.title }} {% endif %}</title>
-
-  <style>
-  html {
-    -webkit-tap-highlight-color: transparent;
-  }
-  pre {
-    white-space: pre-wrap;
-    word-wrap: break-word
-  }
-  .octicon {
-    vertical-align: center;
-    fill: currentColor;
-  }
-  </style>
-
+  <meta property="og:url" content="{{ site.url }}">
   <link rel="apple-touch-icon" href="{{ site.url }}/public/apple-touch-icon.png">
-  <link rel="icon" href="{{ site.url }}/public/favicon.png">
-  <link rel="mask-icon" href="{{ site.url }}/public/mask-icon.svg" color="#e03431">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml">
   <link rel="canonical" href="{{ site.url }}">
-  <link rel="stylesheet" href="{{ site.url }}/styles.css">
-  <link rel="stylesheet" href="{{ site.cdn.pace-theme }}" integrity="{{ site.sri.pace-theme }}" crossorigin="anonymous">
+  <link rel="icon" href="{{ site.url }}/public/favicon.png">
+  <link rel="mask-icon" href="{{ site.url }}/public/mask-icon.svg" color="{{ site.brand_color }}">
+  <link rel="alternate" href="{{ site.url }}/feed.xml">
+  <link rel="sitemap" href="{{ site.url }}/sitemap.xml">
+  {% capture blog %}
+  {% include blog.scss %}
+  {% endcapture %}
+  <style>{{ blog | scssify }}</style>
+  <title>{% if page.title == "404" %}Page not found &middot; {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 </head>

@@ -1,0 +1,25 @@
+{
+  "name": "blog.citrusui.me",
+  "version": "1.0.0",
+  "description": "My very awesome Jekyll blog.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/citrusui/blog.git"
+  },
+  "scripts": {
+    "dev": "export JEKYLL_ENV=development && bundle exec jekyll serve",
+    "lint": "sass-lint -c .sass-lint.yml '_sass/*.scss' -v -q",
+    "prepare": "npm run lint && npm run prod",
+    "prod": "export JEKYLL_ENV=production && bundle exec jekyll build",
+    "publish": "firebase deploy"
+  },
+  "author": "Avery Magnotti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/citrusui/blog/issues"
+  },
+  "homepage": "https://blog.citrusui.me",
+  "devDependencies": {
+    "sass-lint": "^1.10.2"
+  }
+}

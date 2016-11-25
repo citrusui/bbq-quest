@@ -1,37 +1,38 @@
 permalink: pretty
-
-title: citrusui blog
-tagline: Software and much more.
-url: https://blog.citrusui.me
-host: 0.0.0.0
+author: Avery Magnotti
+email: averymagnotti@outlook.com
+url: https://citrusui.me
+description:
+  - The clean and simple portfolio of Avery Magnotti (citrusui). I make websites with modern technologies.
 twitter: citrusuiblog
-paginate: 4
-paginate_path: "/page/:num/"
-
+github: https://github.com/citrusui/blog
+paypal: AveryMagnotti
+brand_color: "#e03431"
 sass:
   sass_dir: _sass
   style: :compressed
-
 cdn:
-  pace: https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js
-  pace-theme: https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css
+  ga-lite: https://cdnjs.cloudflare.com/ajax/libs/ga-lite/1.1.0/ga-lite.min.js
   turbolinks: https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0/turbolinks.min.js
-
 sri:
-  pace: sha256-EPrkNjGEmCWyazb3A/Epj+W7Qm2pB9vnfXw+X6LImPM=
-  pace-theme: sha256-DNn0Y4C4mm62z/egeR6gp2SHN2vSM737qvWjDDuO0y0=
+  ga-lite: sha256-ajtrRiwBtHYY00ij7nHaPHhPxPSyegvxH7B/bPk7meI=
   turbolinks: sha256-HUtkNsGc3BlCNQTNPUr5JsjW0wQFeU4nfYOEuUcxptU=
-
-author:
-  name: Avery Magnotti
-  url: https://twitter.com/citrusui
-  email: citrusui@users.noreply.github.com
-
-github:
-  repo: https://github.com/citrusui/blog
-
+exclude:
+  - node_modules
+  - .hound.yml
+  - .sass-lint.yml
+  - .travis.yml
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - package.json
+  - README.md
 gems:
   - jekyll-feed
-  - jekyll-octicons
+  - jekyll-mentions
   - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-sitemap
+title: citrusui blog
+paginate: 4
+paginate_path: "/page/:num/"

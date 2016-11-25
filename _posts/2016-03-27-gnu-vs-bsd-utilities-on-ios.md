@@ -9,8 +9,8 @@ Surprise surprise, the Apple TV can now be jailbroken again! Hooray! But that’
 
 Why is this important? Well, there are a couple of things:
 
-- all binaries must be compiled for arm64 on the new Apple TV. saurik’s utilities haven’t been compiled for 64-bit yet.
-- these binaries also happen to work on watchOS, which was proven jailbreak-able by Luca Todesco (qwertyoruiop)
+- all binaries must be compiled for arm64 on the new Apple TV. saurik’s utilities haven’t been compiled for 64-bit yet
+- these binaries also happen to work on watchOS
 - the tools included are from BSD, not GNU, like saurik’s
 
 <!-- break -->
@@ -37,4 +37,4 @@ GNU and BSD utilities are slightly, but very different. As I said above, saurik 
 
 You can use the iosbinpack all you want — I’m not forcing you to stick with GNU. Just note that reinstalling GNU utilities will be a long and tedious process.
 
-Thanks to [@ReddestDream](https://twitter.com/ReddestDream) and [@parrotgeek1](https://twitter.com/parrotgeek1) for contributing to this article. I really appreciate it!
+Thanks to @ReddestDream and @parrotgeek1 for contributing to this article. I really appreciate it!

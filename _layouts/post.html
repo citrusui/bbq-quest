@@ -1,28 +1,23 @@
 ---
 layout: default
 ---
-
-<article class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <time datetime="{{ page.date | date: "%B %d, %Y" }}" class="post-date">{{ page.date | date: "%B %d, %Y" }}</time>
-  {{ content }}
-  <br>
-  {% include extras.html %}
-</article>
-
+<h1 class="post-title">{{ page.title }}</h1>
+{% include time.html %}
+{{ content }}
+{% include buttons.html %}
 {% if site.related_posts != empty %}
 <aside class="related">
   <h3>Related posts</h3>
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
-      <li>
-        <a href="{{ site.url }}{{ post.url }}">
-          {{ post.title }}
-          <small>
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-            </small>
-        </a>
-      </li>
+    <li>
+      <a href="{{ site.url }}{{ post.url }}">
+        {{ post.title }}
+        <small>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+        </small>
+      </a>
+    </li>
     {% endfor %}
   </ul>
 </aside>

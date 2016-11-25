@@ -14,13 +14,15 @@
 
 // Blog post or page title
 .page-title,
-.post-title,
-.post-title a {
-  color: #303030;
-}
-.page-title,
 .post-title {
   margin-top: 0;
+  color: $gray-5;
+}
+
+.post-title {
+  a {
+    color: $gray-5;
+  }
 }
 
 // Meta data line below post title
@@ -28,17 +30,17 @@
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
-  color: #9a9a9a;
+  color: $gray-3;
 }
 
 
 // Related posts
 .related {
+  margin-bottom: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin-bottom: 2rem;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
 }
 
 .related-posts {
@@ -51,17 +53,19 @@
 
   li {
     small {
+      color: $gray-3;
       font-size: 75%;
-      color: #999;
     }
 
-    a:hover {
-      color: #268bd2;
-      text-decoration: none;
+    a {
+      &:hover {
+        color: $blue;
+        text-decoration: none;
 
-      small {
-        color: inherit;
+        small {
+          color: inherit;
       }
     }
   }
+}
 }

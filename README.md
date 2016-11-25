@@ -1,5 +1,10 @@
 # [citrusui blog](https://blog.citrusui.me)
 
+# Status
+
+[![Build Status](https://travis-ci.org/citrusui/blog.svg?branch=master)](https://travis-ci.org/citrusui/blog)
+[![devDependencies Status](https://david-dm.org/citrusui/blog/dev-status.svg)](https://david-dm.org/citrusui/blog?type=dev)
+
 My very awesome [Jeykll](https://jekyllrb.com) blog.
 
 There's a lot of tweaks and modifications to the Sass files, but for the most part, this site uses [Poole](http://getpoole.com).

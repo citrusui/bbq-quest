@@ -10,7 +10,7 @@ github: https://github.com/citrusui/blog
 paypal: AveryMagnotti
 brand_color: "#e03431"
 sass:
-  sass_dir: _sass
+  sass_dir: _includes/poole/_sass
   style: :compressed
 cdn:
   ga-lite: https://cdnjs.cloudflare.com/ajax/libs/ga-lite/1.1.0/ga-lite.min.js
@@ -29,11 +29,6 @@ exclude:
   - LICENSE.md
   - package.json
   - README.md
-cache:
-  bundler: true
-  directories:
-    - node_modules
-    - _site
 gems:
   - jekyll-feed
   - jekyll-mentions

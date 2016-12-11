@@ -1,3 +1,3 @@
 # blog.citrusui.me
 
-This package is deprecated. See [citrusui.me](https://github.com/citrusui/me) instead.
+Moved to [citrusui/me.](https://github.com/citrusui/me) Only used for redirection purposes.

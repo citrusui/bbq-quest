@@ -1,15 +1,15 @@
 {
   "name": "blog.citrusui.me",
-  "version": "2.0.0",
-  "description": "DEPRECATED -- see citrusui.me.",
+  "version": "3.0.0",
+  "description": "Moved to citrusui.me. Only used for redirection purposes.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/citrusui/blog.git"
+    "url": "git+https://github.com/citrusui/me.git"
   },
   "author": "Avery Magnotti",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/citrusui/blog/issues"
+    "url": "https://github.com/citrusui/me/issues"
   },
   "homepage": "https://citrusui.me/blog"
 }

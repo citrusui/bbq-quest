@@ -1,4 +1,4 @@
 ---
 redirect_to:
-  - https://citrusui.me
+  - https://citrusui.me/blog/
 ---
